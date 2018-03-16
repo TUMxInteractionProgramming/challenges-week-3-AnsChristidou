@@ -27,11 +27,35 @@ button, strong {
 /* APP BAR */
 
 /* #4 #sweat address both #app-bar s */
+/* info from material.io
+Incremental keyline is set by the app bar height, with a height of 64dp, which determines the keyline increment.
+App bar left and right content padding: 24dp
+App bar icon top and bottom padding: 20dp
+*/
 h1 {
     background-color: #3F51B5;
     color: white;
+	height: 12px;
+	width:100%;
+	line-height: 12px;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 15px; 18px; 0px; 18px;
+	position:fixed;
+	
 }
-
+h1 #text{
+    position:relative; left:52px;
+}
+/*about logo*/
+h1 img {
+	height: 40px;
+	margin: 0px; 18px;
+	
+}
+/* ID for logo*/
+#ducklogo {
+	position:absolute; bottom: 0px; }
 
 /* CHANNELS LIST */
 
@@ -41,6 +65,9 @@ ul {
     background-color: white;
     /* #3 #channels #bullets removed */
     list-style-type: none;
+    margin-top: 48px;
+    margin-bottom: 48px;
+	width:100%;
 }
 
 li {
@@ -51,6 +78,7 @@ li {
     font-size: 16px;
     /* #4 #channel tiles are separated by #lines */
     border-bottom: 1px solid #F5F5F5;
+	
 }
 
 /* #4 active #channel is #highlighted */
@@ -59,11 +87,12 @@ li.selected {
     border-left: 4px solid #3F51B5;
 }
 
-li img {
-    /* #4 #middle vertical alignment of icons in the #channels list */
-    vertical-align: middle;
-}
 
+li img{
+	vertical-align: middle;
+	position: relative; bottom: 16px;
+	
+}
 /* TAB BAR */
 
 /* #4 #sweat #tab-bar */
@@ -72,6 +101,12 @@ li img {
     background-color: white;
     /* #3 #tab-bar #container has all buttons centered */
     text-align: center;
+	position:fixed;
+	bottom: 0;
+	width:40%;
+	display: flex;
+	align-content: space-around;
+
 }
 
 /* #4 add styles to #tab-bar #buttons */
@@ -110,11 +145,15 @@ li img {
 
     /* #4 #message distance to next message container*/
     margin-bottom: 8px;
+    position: relative
 }
 
 
 .message h3 {
     font-size: medium;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
 }
 
 .message h3 em {
@@ -141,5 +180,32 @@ li img {
 /* #4 left align own #messages using #margins */
 .message.own {
     margin-left: 17.5%;
+    margin-top: 48px;
+	
+}
+
+/* layout styles */
+
+#channels {
+	
+	position:absolute; left: 0px;
+	height: 100%;
+	width: 40%;
+}
+
+#chat {
+	position:absolute; right: 0px;
+	height: 100%;
+	width: 60%;
+}
+.channel-meta {
+	position: absolute; right:0px; 
+	height:auto;
+	padding: 10px; 0px;
+}
+
+.reposition{
+    position: absolute; bottom: 8px;
+    right: 8px;
 }
 
